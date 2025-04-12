@@ -1,10 +1,13 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,53 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-[Inter];
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .parallax-bg {
+    @apply relative bg-fixed bg-center bg-no-repeat bg-cover;
+  }
+
+  .section-reveal {
+    @apply opacity-0;
+  }
+
+  .section-reveal.visible {
+    @apply animate-fade-in;
+  }
+  
+  .link-highlight {
+    @apply relative overflow-hidden;
+  }
+  
+  .link-highlight::after {
+    content: '';
+    @apply absolute w-full h-0.5 bg-portfolio-lightPurple bottom-0 left-0 
+      transform scale-x-0 origin-bottom-right transition-transform duration-300;
+  }
+  
+  .link-highlight:hover::after {
+    @apply transform scale-x-100 origin-bottom-left;
+  }
+  
+  .blurred-card {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20;
+  }
+  
+  .glowing {
+    @apply relative overflow-hidden;
+  }
+  
+  .glowing::before {
+    content: '';
+    @apply absolute -inset-1 bg-gradient-to-r from-portfolio-purple via-portfolio-lightPurple to-portfolio-blue 
+      rounded-lg blur opacity-30 transition duration-1000;
+  }
+  
+  .glowing:hover::before {
+    @apply opacity-70;
   }
 }
