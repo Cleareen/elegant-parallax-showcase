@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, GitHub, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 

@@ -1,6 +1,5 @@
-
 import React, { useRef } from 'react';
-import { ExternalLink, GitHub } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -51,7 +50,7 @@ const ProjectCard = ({ title, description, image, technologies, liveUrl, githubU
               rel="noopener noreferrer"
               className="bg-white rounded-full p-2 text-portfolio-blue hover:text-portfolio-purple transition-colors"
             >
-              <GitHub size={20} />
+              <Github size={20} />
             </a>
           </div>
         </div>
