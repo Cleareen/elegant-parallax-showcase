@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -59,7 +60,7 @@ const Navbar = () => {
     )}>
       <div className="container px-4 mx-auto flex justify-between items-center">
         <a href="#home" className="text-xl font-bold text-portfolio-blue">
-          <span className="text-portfolio-purple">Dev</span>Portfolio
+          <span className="text-portfolio-purple">Anna</span>Smith
         </a>
         
         {isMobile && (

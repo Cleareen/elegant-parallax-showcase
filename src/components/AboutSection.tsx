@@ -59,9 +59,8 @@ const AboutSection = () => {
             }`}
             style={{ transitionDelay: '200ms' }}
           >
-            I'm a passionate software engineer with expertise in building modern web applications.
-            With a strong foundation in both frontend and backend technologies, I create seamless 
-            digital experiences that solve real-world problems.
+            I'm a creative Frontend Developer and UI/UX Designer with a passion for 
+            building intuitive, user-friendly web experiences that make a difference.
           </p>
         </div>
 
@@ -75,7 +74,7 @@ const AboutSection = () => {
             <div className="relative glowing rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-portfolio-blue/20 to-portfolio-purple/20 z-0"></div>
               <div className="bg-gradient-to-r from-portfolio-blue to-portfolio-purple aspect-[4/3] rounded-lg overflow-hidden">
-                <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+                <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80')] bg-cover bg-center mix-blend-overlay"></div>
               </div>
             </div>
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-portfolio-purple rounded-lg z-[-1] opacity-20"></div>
@@ -91,8 +90,9 @@ const AboutSection = () => {
             >
               <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">Who I Am</h3>
               <p className="text-gray-600 mb-4">
-                I'm a software engineer with 5+ years of experience specializing in full-stack development.
-                I blend technical expertise with creative problem-solving to build elegant, efficient solutions.
+                I'm a Frontend Developer based in New York with 3+ years of experience.
+                I enjoy transforming complex problems into simple, beautiful, and intuitive designs.
+                When I'm not coding or pushing pixels, you'll find me exploring outdoors or reading.
               </p>
             </div>
             
@@ -104,8 +104,9 @@ const AboutSection = () => {
             >
               <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">My Approach</h3>
               <p className="text-gray-600">
-                I approach each project with a focus on clean code, performance, and user experience.
-                I believe in continuous learning and staying updated with the latest technologies and best practices.
+                I believe good design should be functional, accessible, and delightful.
+                I focus on clean code, thoughtful interactions, and meaningful animations
+                that enhance the user experience without getting in the way.
               </p>
             </div>
           </div>
@@ -116,25 +117,25 @@ const AboutSection = () => {
           <ServiceCard 
             icon={<Code size={24} />}
             title="Web Development"
-            description="Building responsive, modern websites and web applications using the latest technologies."
+            description="Building fast, responsive websites with modern frameworks like React, Next.js and Tailwind CSS."
             delay={0}
-          />
-          <ServiceCard 
-            icon={<Server size={24} />}
-            title="Backend Solutions"
-            description="Crafting robust server-side applications and APIs that power your digital products."
-            delay={200}
           />
           <ServiceCard 
             icon={<Palette size={24} />}
             title="UI/UX Design"
-            description="Creating intuitive, engaging user interfaces with attention to detail and aesthetics."
-            delay={400}
+            description="Creating intuitive interfaces and engaging user experiences that are both beautiful and functional."
+            delay={200}
           />
           <ServiceCard 
             icon={<Monitor size={24} />}
-            title="Tech Consulting"
-            description="Providing expert advice on technology choices, architecture, and development strategies."
+            title="Responsive Design"
+            description="Crafting websites that work flawlessly across all devices, from mobile phones to large desktops."
+            delay={400}
+          />
+          <ServiceCard 
+            icon={<Server size={24} />}
+            title="Performance Optimization"
+            description="Improving website speed and performance for better user experience and SEO ranking."
             delay={600}
           />
         </div>

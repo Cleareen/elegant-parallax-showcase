@@ -98,8 +98,8 @@ const ContactSection = () => {
             )}
             style={{ transitionDelay: '200ms' }}
           >
-            Have a project in mind or want to discuss a potential collaboration?
-            I'd love to hear from you. Reach out using the contact form or through any of the channels below.
+            Have a project in mind or want to know more about my work?
+            I'd love to hear from you. Feel free to reach out using the form or through any of my social channels.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ const ContactSection = () => {
             <ContactInfo 
               icon={<Mail size={24} />}
               title="Email"
-              content="contact@johndeveloper.com"
+              content="anna.smith@example.com"
               delay={0}
             />
             <ContactInfo 
@@ -120,7 +120,7 @@ const ContactSection = () => {
             <ContactInfo 
               icon={<MapPin size={24} />}
               title="Location"
-              content="San Francisco, CA, USA"
+              content="New York, NY, USA"
               delay={400}
             />
             

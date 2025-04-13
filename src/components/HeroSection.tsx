@@ -37,7 +37,6 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen overflow-hidden flex items-center justify-center">
-      {/* Background pattern with parallax effect */}
       <div 
         ref={parallaxRef}
         className="absolute inset-0 bg-gradient-to-b from-blue-50 to-purple-50 opacity-60 z-0"
@@ -63,7 +62,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Content with counter-parallax effect */}
       <div 
         ref={textRef}
         className="container px-4 mx-auto z-10 text-center"
@@ -76,20 +74,20 @@ const HeroSection = () => {
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-portfolio-blue mb-6">
-            John Developer
+            Anna Smith
           </h1>
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <h3 className="text-xl md:text-2xl text-gray-600 mb-8">
-            Software Engineer & Full-Stack Developer
+            Frontend Developer & UI/UX Designer
           </h3>
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <p className="max-w-lg mx-auto text-gray-500 mb-10">
-            I build elegant, responsive, and high-performance applications 
-            with modern technologies and best practices.
+            I create beautiful, responsive websites with modern technologies.
+            Passionate about clean design and user experience that drives results.
           </p>
         </div>
         
@@ -126,7 +124,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
         <ArrowDown 
           size={32} 

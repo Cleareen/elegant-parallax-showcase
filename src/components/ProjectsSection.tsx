@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
@@ -85,34 +86,34 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with product management, shopping cart, and payment integration.",
-      image: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Modern Portfolio Website",
+      description: "A sleek, responsive portfolio website with smooth animations and modern design aesthetics.",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
+      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
     },
     {
-      title: "Task Management App",
-      description: "A Kanban-style task management application for teams with real-time updates and collaboration features.",
-      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
-      technologies: ["React", "Firebase", "Tailwind CSS", "DnD"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Finance Dashboard",
-      description: "Interactive dashboard for financial data visualization with advanced filtering and chart generation.",
+      title: "E-Commerce Dashboard",
+      description: "Admin dashboard for an e-commerce platform with sales analytics, inventory management, and order tracking.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
-      technologies: ["TypeScript", "D3.js", "Express", "PostgreSQL"],
+      technologies: ["React", "Material UI", "Chart.js", "Firebase"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
     },
     {
-      title: "Weather App",
-      description: "A sleek weather forecasting application with location-based reports and interactive maps.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80",
-      technologies: ["React", "OpenWeather API", "Mapbox", "ChartJS"],
+      title: "Recipe Finder App",
+      description: "A web application that helps users discover recipes based on ingredients they have at home.",
+      image: "https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80",
+      technologies: ["JavaScript", "CSS3", "API Integration", "Responsive Design"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com",
+    },
+    {
+      title: "Meditation Mobile App",
+      description: "UI/UX design for a meditation mobile app with soothing color palette and intuitive navigation.",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
+      technologies: ["Figma", "UI/UX", "Prototyping", "User Research"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
     }
@@ -139,8 +140,8 @@ const ProjectsSection = () => {
             )}
             style={{ transitionDelay: '200ms' }}
           >
-            Here are some of my recent projects showcasing my skills and expertise.
-            Each project represents a unique challenge and solution.
+            Here are some of my recent projects that showcase my design and development skills.
+            Each project represents a unique challenge and creative solution.
           </p>
         </div>
 

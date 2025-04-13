@@ -86,24 +86,24 @@ const SkillsSection = () => {
   const descInView = useInView(descRef, { once: true });
 
   const frontendSkills = [
-    { name: 'React', percentage: 90, color: '#61dafb' },
-    { name: 'JavaScript/TypeScript', percentage: 85, color: '#f7df1e' },
     { name: 'HTML/CSS', percentage: 95, color: '#e34c26' },
-    { name: 'Tailwind CSS', percentage: 88, color: '#38bdf8' },
+    { name: 'JavaScript', percentage: 90, color: '#f7df1e' },
+    { name: 'React', percentage: 85, color: '#61dafb' },
+    { name: 'Tailwind CSS', percentage: 92, color: '#38bdf8' },
   ];
   
-  const backendSkills = [
-    { name: 'Node.js', percentage: 82, color: '#68a063' },
-    { name: 'Python', percentage: 78, color: '#3776ab' },
-    { name: 'SQL/NoSQL', percentage: 85, color: '#0074a3' },
-    { name: 'GraphQL', percentage: 75, color: '#e535ab' },
+  const designSkills = [
+    { name: 'Figma', percentage: 88, color: '#9b87f5' },
+    { name: 'Adobe XD', percentage: 85, color: '#ff61f6' },
+    { name: 'UI/UX', percentage: 90, color: '#ff7262' },
+    { name: 'Responsive Design', percentage: 95, color: '#0074a3' },
   ];
 
   const additionalSkills = [
-    { title: 'Tools & DevOps', skills: ['Git/GitHub', 'Docker', 'CI/CD', 'AWS', 'Vercel', 'Netlify'] },
-    { title: 'Other Skills', skills: ['Responsive Design', 'Performance Optimization', 'SEO', 'Accessibility'] },
-    { title: 'Design Tools', skills: ['Figma', 'Adobe XD', 'Photoshop', 'Sketch'] },
-    { title: 'Soft Skills', skills: ['Problem Solving', 'Communication', 'Team Collaboration', 'Project Management'] }
+    { title: 'Frontend Frameworks', skills: ['Next.js', 'Vue.js', 'Gatsby', 'Angular'] },
+    { title: 'CSS Libraries', skills: ['SASS/SCSS', 'Styled Components', 'Material UI', 'Bootstrap'] },
+    { title: 'Design Tools', skills: ['Photoshop', 'Illustrator', 'Sketch', 'InVision'] },
+    { title: 'Other Skills', skills: ['Git/GitHub', 'Responsive Design', 'Accessibility', 'SEO Basics'] }
   ];
 
   return (
@@ -127,14 +127,14 @@ const SkillsSection = () => {
             )}
             style={{ transitionDelay: '200ms' }}
           >
-            I've honed my skills in various technologies and tools over the years.
-            Here's an overview of my technical expertise and capabilities.
+            I've developed expertise in various frontend technologies and design tools.
+            Here's a snapshot of my technical skills and capabilities.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 mb-16">
           <div>
-            <h3 className="text-xl font-semibold text-portfolio-blue mb-6">Frontend Development</h3>
+            <h3 className="text-xl font-semibold text-portfolio-blue mb-6">Development Skills</h3>
             {frontendSkills.map((skill, index) => (
               <Skill
                 key={index}
@@ -147,8 +147,8 @@ const SkillsSection = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold text-portfolio-blue mb-6">Backend Development</h3>
-            {backendSkills.map((skill, index) => (
+            <h3 className="text-xl font-semibold text-portfolio-blue mb-6">Design Skills</h3>
+            {designSkills.map((skill, index) => (
               <Skill
                 key={index}
                 name={skill.name}
