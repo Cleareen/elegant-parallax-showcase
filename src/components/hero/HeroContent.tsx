@@ -64,7 +64,7 @@ const HeroContent: React.FC<HeroContentProps> = ({ textRef }) => {
           onClick={() => scrollToSection('projects')}
         >
           <span className="absolute inset-0 w-full h-full bg-white/0 group-hover:bg-white/10 transition-colors duration-300"></span>
-          <span className="relative z-10">View My Work</span>
+          <span className="relative z-20">View My Work</span>
         </Button>
       </div>
     </div>
