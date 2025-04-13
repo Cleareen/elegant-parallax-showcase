@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GraduationCap, School, BookOpen, Clock, Calendar, Certificate } from 'lucide-react';
+import { GraduationCap, School, BookOpen, Clock, Calendar, Award } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const QualificationsSection = () => {
@@ -42,7 +42,7 @@ const QualificationsSection = () => {
           {/* Bootcamps & Certifications */}
           <div>
             <div className="flex items-center mb-8">
-              <Certificate className="text-portfolio-purple mr-3" size={28} />
+              <Award className="text-portfolio-purple mr-3" size={28} />
               <h3 className="text-2xl font-bold text-portfolio-blue">Bootcamps & Certifications</h3>
             </div>
             
@@ -52,7 +52,7 @@ const QualificationsSection = () => {
                 institution="Frontend Masters Bootcamp"
                 date="2023"
                 description="Intensive 12-week program covering advanced React patterns, state management, and performance optimization."
-                icon={<Certificate size={20} className="text-portfolio-purple" />}
+                icon={<Award size={20} className="text-portfolio-purple" />}
               />
               
               <QualificationCard 
@@ -60,7 +60,7 @@ const QualificationsSection = () => {
                 institution="Design+Code"
                 date="2022"
                 description="Comprehensive program on design systems, prototyping, and design thinking methodologies."
-                icon={<Certificate size={20} className="text-portfolio-purple" />}
+                icon={<Award size={20} className="text-portfolio-purple" />}
               />
               
               <QualificationCard 
@@ -68,7 +68,7 @@ const QualificationsSection = () => {
                 institution="Tech Accelerator Program"
                 date="2021"
                 description="Intensive bootcamp focused on modern JavaScript stack including Node.js, Express, and MongoDB."
-                icon={<Certificate size={20} className="text-portfolio-purple" />}
+                icon={<Award size={20} className="text-portfolio-purple" />}
               />
             </div>
           </div>
