@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -12,10 +11,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Update navbar style on scroll
       setScrolled(window.scrollY > 20);
       
-      // Find active section based on scroll position
       const sections = document.querySelectorAll('section[id]');
       const scrollPosition = window.scrollY + 100;
       
@@ -65,7 +62,6 @@ const Navbar = () => {
           <span className="text-portfolio-purple">Dev</span>Portfolio
         </a>
         
-        {/* Mobile menu button */}
         {isMobile && (
           <button 
             onClick={() => setIsOpen(!isOpen)} 
@@ -76,7 +72,6 @@ const Navbar = () => {
           </button>
         )}
         
-        {/* Desktop Navigation */}
         {!isMobile && (
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -96,12 +91,11 @@ const Navbar = () => {
           </nav>
         )}
         
-        {/* Social icons - desktop only */}
         {!isMobile && (
           <div className="hidden lg:flex items-center gap-4">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
               className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              <GitHub size={20} />
+              <Github size={20} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
               className="text-gray-600 hover:text-portfolio-purple transition-colors">
@@ -114,7 +108,6 @@ const Navbar = () => {
           </div>
         )}
         
-        {/* Mobile Navigation Overlay */}
         {isMobile && (
           <div className={cn(
             "fixed inset-0 bg-white z-40 transition-transform duration-300 transform",
@@ -147,7 +140,7 @@ const Navbar = () => {
               <div className="flex justify-center gap-8 mt-12">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer"
                   className="text-gray-600 hover:text-portfolio-purple transition-colors">
-                  <GitHub size={24} />
+                  <Github size={24} />
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
                   className="text-gray-600 hover:text-portfolio-purple transition-colors">
