@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, Code, Zap, Laptop, RocketLaunch } from 'lucide-react';
+import { ArrowDown, Code, Zap, Laptop, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -102,7 +102,7 @@ const HeroSection = () => {
             { icon: <Code size={40} className="text-white" />, top: '15%', left: '10%' },
             { icon: <Zap size={40} className="text-white" />, top: '25%', left: '80%' },
             { icon: <Laptop size={50} className="text-white" />, top: '70%', left: '15%' },
-            { icon: <RocketLaunch size={50} className="text-white" />, top: '65%', left: '85%' }
+            { icon: <Rocket size={50} className="text-white" />, top: '65%', left: '85%' }
           ].map((item, i) => (
             <div 
               key={i}
