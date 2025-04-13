@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GraduationCap, School, BookOpen, Clock, Calendar, Award } from 'lucide-react';
+import { GraduationCap, School, BookOpen, Calendar, Award } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const QualificationsSection = () => {
@@ -27,6 +27,7 @@ const QualificationsSection = () => {
                 date="2016 - 2020"
                 description="Graduated with honors. Specialized in Human-Computer Interaction and Software Engineering."
                 icon={<School size={20} className="text-portfolio-purple" />}
+                imageUrl="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
               />
               
               <QualificationCard 
@@ -35,6 +36,7 @@ const QualificationsSection = () => {
                 date="2020 - 2022"
                 description="Focused on interactive design systems and usability research methodologies."
                 icon={<BookOpen size={20} className="text-portfolio-purple" />}
+                imageUrl="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
               />
             </div>
           </div>
@@ -53,6 +55,7 @@ const QualificationsSection = () => {
                 date="2023"
                 description="Intensive 12-week program covering advanced React patterns, state management, and performance optimization."
                 icon={<Award size={20} className="text-portfolio-purple" />}
+                imageUrl="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
               />
               
               <QualificationCard 
@@ -61,6 +64,7 @@ const QualificationsSection = () => {
                 date="2022"
                 description="Comprehensive program on design systems, prototyping, and design thinking methodologies."
                 icon={<Award size={20} className="text-portfolio-purple" />}
+                imageUrl="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
               />
               
               <QualificationCard 
@@ -69,6 +73,7 @@ const QualificationsSection = () => {
                 date="2021"
                 description="Intensive bootcamp focused on modern JavaScript stack including Node.js, Express, and MongoDB."
                 icon={<Award size={20} className="text-portfolio-purple" />}
+                imageUrl="https://images.unsplash.com/photo-1544256718-3bcf237f3974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
               />
             </div>
           </div>
@@ -84,27 +89,33 @@ interface QualificationCardProps {
   date: string;
   description: string;
   icon: React.ReactNode;
+  imageUrl?: string;
 }
 
-const QualificationCard = ({ title, institution, date, description, icon }: QualificationCardProps) => {
+const QualificationCard = ({ title, institution, date, description, icon, imageUrl }: QualificationCardProps) => {
   return (
     <div className="relative">
       <div className="absolute -left-12 top-1 w-6 h-6 bg-white rounded-full border-2 border-portfolio-purple flex items-center justify-center">
         {icon}
       </div>
-      <Card className="p-6 backdrop-blur-sm bg-white/50 border border-white/20 hover:shadow-md hover:shadow-portfolio-purple/5 transition-all duration-300 group">
-        <div className="flex items-start justify-between mb-2">
-          <h4 className="font-bold text-lg text-portfolio-blue group-hover:text-portfolio-purple transition-colors">{title}</h4>
+      <Card className="p-6 backdrop-blur-sm bg-white/50 border border-white/20 hover:shadow-md hover:shadow-portfolio-purple/5 transition-all duration-300 group overflow-hidden">
+        {imageUrl && (
+          <div className="absolute inset-0 opacity-10 bg-cover bg-center z-0" style={{ backgroundImage: `url(${imageUrl})` }}></div>
+        )}
+        <div className="relative z-10">
+          <div className="flex items-start justify-between mb-2">
+            <h4 className="font-bold text-lg text-portfolio-blue group-hover:text-portfolio-purple transition-colors">{title}</h4>
+          </div>
+          <div className="mb-2 flex items-center text-sm text-gray-500">
+            <Calendar size={14} className="mr-1" /> 
+            <span>{date}</span>
+          </div>
+          <div className="mb-3 flex items-center text-sm text-gray-600 font-medium">
+            <School size={14} className="mr-1" /> 
+            <span>{institution}</span>
+          </div>
+          <p className="text-gray-600">{description}</p>
         </div>
-        <div className="mb-2 flex items-center text-sm text-gray-500">
-          <Calendar size={14} className="mr-1" /> 
-          <span>{date}</span>
-        </div>
-        <div className="mb-3 flex items-center text-sm text-gray-600 font-medium">
-          <School size={14} className="mr-1" /> 
-          <span>{institution}</span>
-        </div>
-        <p className="text-gray-600">{description}</p>
       </Card>
     </div>
   );
