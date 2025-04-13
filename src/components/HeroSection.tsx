@@ -37,18 +37,33 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen overflow-hidden flex items-center justify-center">
+      {/* Futuristic background with sample images */}
+      <div 
+        className="absolute inset-0 z-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-portfolio-blue/90 to-portfolio-purple/90 mix-blend-multiply z-10"></div>
+        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-3 gap-1 opacity-40 z-0">
+          <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
+          <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
+          <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
+          <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
+          <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
+          <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
+        </div>
+      </div>
+      
       <div 
         ref={parallaxRef}
-        className="absolute inset-0 bg-gradient-to-b from-blue-50 to-purple-50 opacity-60 z-0"
+        className="absolute inset-0 opacity-60 z-5"
       >
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-30">
           {[...Array(10)].map((_, i) => (
             <div 
               key={i}
               className={cn(
-                "absolute rounded-full",
+                "absolute rounded-full blur-md",
                 "animate-float",
-                i % 2 === 0 ? "bg-portfolio-blue/20" : "bg-portfolio-purple/20"
+                i % 2 === 0 ? "bg-portfolio-lightPurple/40" : "bg-cyan-400/40"
               )}
               style={{
                 width: `${Math.random() * 200 + 50}px`,
@@ -67,25 +82,25 @@ const HeroSection = () => {
         className="container px-4 mx-auto z-10 text-center"
       >
         <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <h2 className="text-lg md:text-xl font-medium text-portfolio-purple mb-4">
+          <h2 className="text-lg md:text-xl font-medium text-portfolio-lightPurple mb-4">
             Hello, I'm
           </h2>
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-portfolio-blue mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
             Anna Smith
           </h1>
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <h3 className="text-xl md:text-2xl text-gray-600 mb-8">
+          <h3 className="text-xl md:text-2xl text-gray-100 mb-8">
             Frontend Developer & UI/UX Designer
           </h3>
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-          <p className="max-w-lg mx-auto text-gray-500 mb-10">
+          <p className="max-w-lg mx-auto text-gray-200 mb-10">
             I create beautiful, responsive websites with modern technologies.
             Passionate about clean design and user experience that drives results.
           </p>
@@ -93,7 +108,7 @@ const HeroSection = () => {
         
         <div className="animate-fade-in-up flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: '1s' }}>
           <Button 
-            className="bg-portfolio-purple hover:bg-portfolio-purple/90 text-white"
+            className="bg-portfolio-lightPurple hover:bg-portfolio-lightPurple/90 text-white backdrop-blur-sm border border-white/10"
             onClick={() => {
               const contactSection = document.getElementById('contact');
               if (contactSection) {
@@ -108,7 +123,7 @@ const HeroSection = () => {
           </Button>
           <Button 
             variant="outline" 
-            className="border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue/5"
+            className="border-white text-white hover:bg-white/10 backdrop-blur-sm"
             onClick={() => {
               const projectsSection = document.getElementById('projects');
               if (projectsSection) {
@@ -127,7 +142,7 @@ const HeroSection = () => {
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
         <ArrowDown 
           size={32} 
-          className="text-portfolio-blue opacity-70"
+          className="text-white opacity-70"
           onClick={scrollToNextSection}
         />
       </div>

@@ -49,6 +49,7 @@ const Navbar = () => {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
+    { id: 'qualifications', label: 'Education' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ];
@@ -56,17 +57,17 @@ const Navbar = () => {
   return (
     <header className={cn(
       "fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4",
-      scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+      scrolled ? "bg-portfolio-blue/80 backdrop-blur-md shadow-sm" : "bg-transparent"
     )}>
       <div className="container px-4 mx-auto flex justify-between items-center">
-        <a href="#home" className="text-xl font-bold text-portfolio-blue">
-          <span className="text-portfolio-purple">Anna</span>Smith
+        <a href="#home" className="text-xl font-bold text-white">
+          <span className="text-portfolio-lightPurple">Anna</span>Smith
         </a>
         
         {isMobile && (
           <button 
             onClick={() => setIsOpen(!isOpen)} 
-            className="lg:hidden text-portfolio-blue"
+            className="lg:hidden text-white"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -80,10 +81,10 @@ const Navbar = () => {
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
                 className={cn(
-                  "link-highlight font-medium transition-colors",
+                  "link-highlight font-medium transition-colors text-sm uppercase tracking-wide",
                   activeSection === link.id 
-                    ? "text-portfolio-purple" 
-                    : "text-portfolio-blue hover:text-portfolio-purple"
+                    ? "text-portfolio-lightPurple" 
+                    : "text-white hover:text-portfolio-lightPurple"
                 )}
               >
                 {link.label}
@@ -95,15 +96,15 @@ const Navbar = () => {
         {!isMobile && (
           <div className="hidden lg:flex items-center gap-4">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-              className="text-gray-600 hover:text-portfolio-purple transition-colors">
+              className="text-white/70 hover:text-portfolio-lightPurple transition-colors">
               <Github size={20} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-              className="text-gray-600 hover:text-portfolio-purple transition-colors">
+              className="text-white/70 hover:text-portfolio-lightPurple transition-colors">
               <Linkedin size={20} />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-              className="text-gray-600 hover:text-portfolio-purple transition-colors">
+              className="text-white/70 hover:text-portfolio-lightPurple transition-colors">
               <Twitter size={20} />
             </a>
           </div>
@@ -111,13 +112,13 @@ const Navbar = () => {
         
         {isMobile && (
           <div className={cn(
-            "fixed inset-0 bg-white z-40 transition-transform duration-300 transform",
+            "fixed inset-0 bg-portfolio-blue/95 backdrop-blur-md z-40 transition-transform duration-300 transform",
             isOpen ? "translate-x-0" : "translate-x-full"
           )}>
             <div className="flex flex-col h-full p-8">
               <div className="flex justify-end">
                 <button onClick={closeMenu} aria-label="Close menu">
-                  <X size={24} className="text-portfolio-blue" />
+                  <X size={24} className="text-white" />
                 </button>
               </div>
               
@@ -129,8 +130,8 @@ const Navbar = () => {
                     className={cn(
                       "text-xl font-medium transition-colors",
                       activeSection === link.id 
-                        ? "text-portfolio-purple" 
-                        : "text-portfolio-blue"
+                        ? "text-portfolio-lightPurple" 
+                        : "text-white"
                     )}
                   >
                     {link.label}
@@ -140,15 +141,15 @@ const Navbar = () => {
               
               <div className="flex justify-center gap-8 mt-12">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-portfolio-purple transition-colors">
+                  className="text-white/70 hover:text-portfolio-lightPurple transition-colors">
                   <Github size={24} />
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-portfolio-purple transition-colors">
+                  className="text-white/70 hover:text-portfolio-lightPurple transition-colors">
                   <Linkedin size={24} />
                 </a>
                 <a href="mailto:contact@example.com"
-                  className="text-gray-600 hover:text-portfolio-purple transition-colors">
+                  className="text-white/70 hover:text-portfolio-lightPurple transition-colors">
                   <Mail size={24} />
                 </a>
               </div>
