@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Code, Laptop, School, GraduationCap } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
 
@@ -72,9 +72,11 @@ const AboutSection = () => {
           >
             <div className="relative glowing rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-portfolio-blue/20 to-portfolio-purple/20 z-0"></div>
-              <div className="bg-gradient-to-r from-portfolio-blue to-portfolio-purple aspect-[4/3] rounded-lg overflow-hidden">
-                <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80')] bg-cover bg-center mix-blend-overlay"></div>
-              </div>
+              <img 
+                src="/lovable-uploads/c073f43a-1c8a-4665-9e40-e364adcd8e79.png" 
+                alt="Eddie Mkansi at a border sign between South Africa and Mozambique" 
+                className="relative z-10 w-full h-auto rounded-lg"
+              />
             </div>
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-portfolio-purple rounded-lg z-[-1] opacity-20"></div>
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-portfolio-blue rounded-lg z-[-1] opacity-20"></div>
