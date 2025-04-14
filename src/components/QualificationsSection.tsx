@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { GraduationCap, School, BookOpen, Calendar, Award, User, Certificate } from 'lucide-react';
+import { GraduationCap, School, BookOpen, Calendar, Award, User } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const QualificationsSection = () => {
@@ -62,7 +61,7 @@ const QualificationsSection = () => {
           {/* Certifications */}
           <div>
             <div className="flex items-center mb-8">
-              <Certificate className="text-portfolio-lightBlue mr-3" size={28} />
+              <Award className="text-portfolio-lightBlue mr-3" size={28} />
               <h3 className="text-2xl font-bold text-portfolio-code-text">Certifications & Badges</h3>
             </div>
             
