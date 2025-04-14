@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Code, Server, Palette, Monitor } from 'lucide-react';
+import { Code, Laptop, School, GraduationCap } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
 
 interface ServiceCardProps {
@@ -59,8 +59,7 @@ const AboutSection = () => {
             }`}
             style={{ transitionDelay: '200ms' }}
           >
-            I'm a creative Frontend Developer and UI/UX Designer with a passion for 
-            building intuitive, user-friendly web experiences that make a difference.
+            I'm a passionate, multi-talented educator turned software engineer, data analyst, and aspiring tech entrepreneur.
           </p>
         </div>
 
@@ -90,9 +89,10 @@ const AboutSection = () => {
             >
               <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">Who I Am</h3>
               <p className="text-gray-600 mb-4">
-                I'm a Frontend Developer based in New York with 3+ years of experience.
-                I enjoy transforming complex problems into simple, beautiful, and intuitive designs.
-                When I'm not coding or pushing pixels, you'll find me exploring outdoors or reading.
+                With a rock-solid background in teaching Computer Applications Technology (CAT), 
+                Information Technology (IT), Digital Technologies, and Mathematics, I've spent 
+                over 4 years in the classroom, inspiring young minds—and now I'm building 
+                intelligent systems that solve real-world problems.
               </p>
             </div>
             
@@ -104,9 +104,10 @@ const AboutSection = () => {
             >
               <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">My Approach</h3>
               <p className="text-gray-600">
-                I believe good design should be functional, accessible, and delightful.
-                I focus on clean code, thoughtful interactions, and meaningful animations
-                that enhance the user experience without getting in the way.
+                While my journey began in education, my love for technology and innovation led 
+                me to explore software development, data engineering, business intelligence, and 
+                cybersecurity. Today, I'm equally comfortable in a classroom and a codebase, creating 
+                apps, analyzing data, building educational tech tools, and helping others do the same.
               </p>
             </div>
           </div>
@@ -116,26 +117,26 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <ServiceCard 
             icon={<Code size={24} />}
-            title="Web Development"
-            description="Building fast, responsive websites with modern frameworks like React, Next.js and Tailwind CSS."
+            title="Software Development"
+            description="Building applications with Python, JavaScript, Dart, and React, with a focus on clean, efficient code."
             delay={0}
           />
           <ServiceCard 
-            icon={<Palette size={24} />}
-            title="UI/UX Design"
-            description="Creating intuitive interfaces and engaging user experiences that are both beautiful and functional."
+            icon={<Laptop size={24} />}
+            title="Data Engineering"
+            description="Creating data pipelines, analytics solutions, and dashboards using tools like Apache Spark, Pandas, and Power BI."
             delay={200}
           />
           <ServiceCard 
-            icon={<Monitor size={24} />}
-            title="Responsive Design"
-            description="Crafting websites that work flawlessly across all devices, from mobile phones to large desktops."
+            icon={<School size={24} />}
+            title="Education & Training"
+            description="Teaching IT, CAT, Digital Technologies and Mathematics, with integration of robotics and coding."
             delay={400}
           />
           <ServiceCard 
-            icon={<Server size={24} />}
-            title="Performance Optimization"
-            description="Improving website speed and performance for better user experience and SEO ranking."
+            icon={<GraduationCap size={24} />}
+            title="Tech Entrepreneurship"
+            description="Developing innovative solutions and building a multi-faceted tech business offering development, data, and cybersecurity services."
             delay={600}
           />
         </div>

@@ -41,25 +41,25 @@ const HeroContent: React.FC<HeroContentProps> = ({ textRef }) => {
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-portfolio-code-text mb-4 font-mono">
-            <span className="text-portfolio-code-highlight">const</span> <span className="text-portfolio-code-variable">developer</span> = <span className="text-portfolio-code-string">"Anna Smith"</span>;
+            <span className="text-portfolio-code-highlight">const</span> <span className="text-portfolio-code-variable">developer</span> = <span className="text-portfolio-code-string">"Eddie Mkansi"</span>;
           </h1>
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <div className="flex flex-wrap gap-2 mb-4 font-mono text-sm md:text-base">
-            <span className="bg-portfolio-code-highlight/20 text-portfolio-code-highlight px-2 py-1 rounded">Frontend</span>
-            <span className="bg-portfolio-lightBlue/20 text-portfolio-lightBlue px-2 py-1 rounded">React</span>
-            <span className="bg-portfolio-code-function/20 text-portfolio-code-function px-2 py-1 rounded">TypeScript</span>
-            <span className="bg-portfolio-code-variable/20 text-portfolio-code-variable px-2 py-1 rounded">UI/UX</span>
+            <span className="bg-portfolio-code-highlight/20 text-portfolio-code-highlight px-2 py-1 rounded">Software Engineer</span>
+            <span className="bg-portfolio-lightBlue/20 text-portfolio-lightBlue px-2 py-1 rounded">Data Analyst</span>
+            <span className="bg-portfolio-code-function/20 text-portfolio-code-function px-2 py-1 rounded">Educator</span>
+            <span className="bg-portfolio-code-variable/20 text-portfolio-code-variable px-2 py-1 rounded">Tech Entrepreneur</span>
           </div>
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '1s' }}>
           <pre className="bg-portfolio-blue/50 p-4 rounded border border-portfolio-code-highlight/20 text-portfolio-code-text mb-6 overflow-x-auto text-xs md:text-sm">
             <span className="text-portfolio-code-comment">/**</span><br />
-            <span className="text-portfolio-code-comment"> * I create beautiful, responsive websites</span><br />
-            <span className="text-portfolio-code-comment"> * Passionate about clean design and user experience</span><br />
-            <span className="text-portfolio-code-comment"> * that drives results.</span><br />
+            <span className="text-portfolio-code-comment"> * Passionate multi-talented educator turned software engineer</span><br />
+            <span className="text-portfolio-code-comment"> * Data analyst and aspiring tech entrepreneur</span><br />
+            <span className="text-portfolio-code-comment"> * Building intelligent systems that solve real-world problems</span><br />
             <span className="text-portfolio-code-comment"> */</span>
           </pre>
         </div>

@@ -86,34 +86,34 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "Modern Portfolio Website",
-      description: "A sleek, responsive portfolio website with smooth animations and modern design aesthetics.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "E-Commerce Dashboard",
-      description: "Admin dashboard for an e-commerce platform with sales analytics, inventory management, and order tracking.",
+      title: "Web Scraping & Automation Tool",
+      description: "Automated market data collection and dashboarding solution for business teams.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
-      technologies: ["React", "Material UI", "Chart.js", "Firebase"],
+      technologies: ["Python", "Selenium", "BeautifulSoup", "AWS Lambda", "Streamlit"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
     },
     {
-      title: "Recipe Finder App",
-      description: "A web application that helps users discover recipes based on ingredients they have at home.",
+      title: "Riendzo Travel App",
+      description: "Flutter-based trip planning social app integrating Firebase & real-time collaboration. Encourages group trip planning and travel journaling.",
       image: "https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80",
-      technologies: ["JavaScript", "CSS3", "API Integration", "Responsive Design"],
+      technologies: ["Flutter", "Dart", "Firebase", "Real-time Database"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
     },
     {
-      title: "Meditation Mobile App",
-      description: "UI/UX design for a meditation mobile app with soothing color palette and intuitive navigation.",
+      title: "Educational Robotics Integration",
+      description: "Led robotics club and designed interactive workshops using IoT and automation for education.",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
+      technologies: ["LEGO Robotics", "Arduino", "Raspberry Pi", "Micro:bit"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com",
+    },
+    {
+      title: "Tech Consulting & Development Business",
+      description: "Offering web & app development, data & analytics services, cybersecurity training, and EdTech & robotics solutions.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
-      technologies: ["Figma", "UI/UX", "Prototyping", "User Research"],
+      technologies: ["Business Development", "Consulting", "Full-Stack Services", "Training"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
     }
@@ -140,8 +140,8 @@ const ProjectsSection = () => {
             )}
             style={{ transitionDelay: '200ms' }}
           >
-            Here are some of my recent projects that showcase my design and development skills.
-            Each project represents a unique challenge and creative solution.
+            Here are some of my recent projects that showcase my technical skills and creative problem-solving abilities.
+            Each project represents a unique challenge and innovative solution.
           </p>
         </div>
 

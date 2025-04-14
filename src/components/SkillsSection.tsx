@@ -85,25 +85,25 @@ const SkillsSection = () => {
   const titleInView = useInView(titleRef, { once: true });
   const descInView = useInView(descRef, { once: true });
 
-  const frontendSkills = [
-    { name: 'HTML/CSS', percentage: 95, color: '#e34c26' },
-    { name: 'JavaScript', percentage: 90, color: '#f7df1e' },
-    { name: 'React', percentage: 85, color: '#61dafb' },
-    { name: 'Tailwind CSS', percentage: 92, color: '#38bdf8' },
+  const programmingSkills = [
+    { name: 'Python', percentage: 92, color: '#3776ab' },
+    { name: 'JavaScript', percentage: 85, color: '#f7df1e' },
+    { name: 'Dart', percentage: 80, color: '#0175c2' },
+    { name: 'HTML/CSS', percentage: 90, color: '#e34c26' },
   ];
   
-  const designSkills = [
-    { name: 'Figma', percentage: 88, color: '#9b87f5' },
-    { name: 'Adobe XD', percentage: 85, color: '#ff61f6' },
-    { name: 'UI/UX', percentage: 90, color: '#ff7262' },
-    { name: 'Responsive Design', percentage: 95, color: '#0074a3' },
+  const dataSkills = [
+    { name: 'Apache Spark', percentage: 85, color: '#e25a1c' },
+    { name: 'Pandas', percentage: 90, color: '#150458' },
+    { name: 'Power BI', percentage: 88, color: '#f2c811' },
+    { name: 'SQL', percentage: 85, color: '#0074a3' },
   ];
 
   const additionalSkills = [
-    { title: 'Frontend Frameworks', skills: ['Next.js', 'Vue.js', 'Gatsby', 'Angular'] },
-    { title: 'CSS Libraries', skills: ['SASS/SCSS', 'Styled Components', 'Material UI', 'Bootstrap'] },
-    { title: 'Design Tools', skills: ['Photoshop', 'Illustrator', 'Sketch', 'InVision'] },
-    { title: 'Other Skills', skills: ['Git/GitHub', 'Responsive Design', 'Accessibility', 'SEO Basics'] }
+    { title: 'Frameworks & Tools', skills: ['Flutter', 'React', 'Firebase', 'Node.js', 'Streamlit'] },
+    { title: 'Databases', skills: ['PostgreSQL', 'MySQL', 'NoSQL'] },
+    { title: 'Cloud Services', skills: ['AWS', 'Firebase', 'Google Cloud'] },
+    { title: 'Soft Skills', skills: ['Problem-solving', 'Team collaboration', 'Public speaking', 'Teaching & mentoring', 'Project planning'] }
   ];
 
   return (
@@ -127,15 +127,15 @@ const SkillsSection = () => {
             )}
             style={{ transitionDelay: '200ms' }}
           >
-            I've developed expertise in various frontend technologies and design tools.
-            Here's a snapshot of my technical skills and capabilities.
+            I've developed expertise in various technologies and tools across software development, data engineering, 
+            and educational technology.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 mb-16">
           <div>
-            <h3 className="text-xl font-semibold text-portfolio-blue mb-6">Development Skills</h3>
-            {frontendSkills.map((skill, index) => (
+            <h3 className="text-xl font-semibold text-portfolio-blue mb-6">Programming Skills</h3>
+            {programmingSkills.map((skill, index) => (
               <Skill
                 key={index}
                 name={skill.name}
@@ -147,8 +147,8 @@ const SkillsSection = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold text-portfolio-blue mb-6">Design Skills</h3>
-            {designSkills.map((skill, index) => (
+            <h3 className="text-xl font-semibold text-portfolio-blue mb-6">Data & Analytics Skills</h3>
+            {dataSkills.map((skill, index) => (
               <Skill
                 key={index}
                 name={skill.name}
