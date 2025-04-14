@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
@@ -92,8 +93,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-[Inter];
+    @apply bg-portfolio-code-bg text-portfolio-code-text font-[Inter];
     scroll-behavior: smooth;
+  }
+
+  code, pre {
+    font-family: 'Fira Code', monospace;
   }
 }
 
@@ -134,11 +139,27 @@
   
   .glowing::before {
     content: '';
-    @apply absolute -inset-1 bg-gradient-to-r from-portfolio-purple via-portfolio-lightPurple to-portfolio-blue 
+    @apply absolute -inset-1 bg-gradient-to-r from-portfolio-purple via-portfolio-lightPurple to-portfolio-lightBlue 
       rounded-lg blur opacity-30 transition duration-1000;
   }
   
   .glowing:hover::before {
     @apply opacity-70;
+  }
+
+  .code-block {
+    @apply bg-portfolio-code-bg text-portfolio-code-text p-4 rounded-md font-mono border border-portfolio-code-highlight/20;
+  }
+
+  .comment {
+    @apply text-portfolio-code-comment;
+  }
+
+  .highlight {
+    @apply text-portfolio-code-highlight;
+  }
+
+  .error {
+    @apply text-portfolio-code-error;
   }
 }

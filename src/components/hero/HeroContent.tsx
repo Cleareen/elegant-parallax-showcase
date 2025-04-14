@@ -23,8 +23,8 @@ const HeroContent: React.FC<HeroContentProps> = ({ textRef }) => {
       className="container px-4 mx-auto z-10 text-center"
     >
       <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-        <h2 className="text-lg md:text-xl font-medium text-portfolio-lightPurple mb-4">
-          Hello, I'm
+        <h2 className="text-lg md:text-xl font-medium text-portfolio-lightPurple mb-4 font-mono">
+          <span className="text-portfolio-code-comment">// </span>Hello, I'm
         </h2>
       </div>
       
@@ -44,9 +44,11 @@ const HeroContent: React.FC<HeroContentProps> = ({ textRef }) => {
       </div>
       
       <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-        <p className="max-w-lg mx-auto text-gray-200 mb-10">
+        <p className="max-w-lg mx-auto text-gray-200 mb-10 font-mono">
+          <span className="text-portfolio-code-comment">/* </span>
           I create beautiful, responsive websites with modern technologies.
           Passionate about clean design and user experience that drives results.
+          <span className="text-portfolio-code-comment"> */</span>
         </p>
       </div>
       
@@ -56,15 +58,15 @@ const HeroContent: React.FC<HeroContentProps> = ({ textRef }) => {
           onClick={() => scrollToSection('contact')}
         >
           <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-portfolio-lightPurple to-portfolio-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          <span className="relative z-10">Get in Touch</span>
+          <span className="relative z-10 font-mono">.contact()</span>
         </Button>
         <Button 
           variant="outline" 
-          className="border-white text-white hover:bg-white/10 backdrop-blur-sm relative overflow-hidden group"
+          className="border-portfolio-lightPurple text-portfolio-lightPurple hover:bg-portfolio-lightPurple/10 backdrop-blur-sm relative overflow-hidden group"
           onClick={() => scrollToSection('projects')}
         >
-          <span className="absolute inset-0 w-full h-full bg-white/0 group-hover:bg-white/10 transition-colors duration-300"></span>
-          <span className="relative z-20">View My Work</span>
+          <span className="absolute inset-0 w-full h-full bg-portfolio-lightPurple/0 group-hover:bg-portfolio-lightPurple/10 transition-colors duration-300"></span>
+          <span className="relative z-20 font-mono">.viewProjects()</span>
         </Button>
       </div>
     </div>

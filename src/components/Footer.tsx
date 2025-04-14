@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, Code, BrainCircuit } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="py-10 bg-portfolio-blue text-white relative overflow-hidden">
-      {/* Futuristic background elements */}
+      {/* Code-themed background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-portfolio-lightPurple to-transparent"></div>
         <div className="grid grid-cols-12 h-full">
@@ -25,22 +25,28 @@ const Footer = () => {
       <div className="container px-4 mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <a href="#home" className="text-xl font-bold">
-              <span className="text-portfolio-lightPurple">Anna</span>Smith
+            <a href="#home" className="text-xl font-bold font-mono">
+              <span className="text-portfolio-lightPurple">Anna</span>
+              <span className="text-white">.</span>
+              <span className="text-portfolio-lightBlue">dev</span>
             </a>
-            <p className="mt-2 text-gray-300 text-sm">
+            <p className="mt-2 text-gray-300 text-sm font-mono">
+              <span className="text-portfolio-code-comment">// </span>
               &copy; {new Date().getFullYear()} Anna Smith. All rights reserved.
             </p>
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
             <nav className="flex flex-wrap justify-center gap-6">
-              <a href="#home" className="text-gray-300 hover:text-portfolio-lightPurple transition-colors text-sm">Home</a>
-              <a href="#about" className="text-gray-300 hover:text-portfolio-lightPurple transition-colors text-sm">About</a>
-              <a href="#skills" className="text-gray-300 hover:text-portfolio-lightPurple transition-colors text-sm">Skills</a>
-              <a href="#qualifications" className="text-gray-300 hover:text-portfolio-lightPurple transition-colors text-sm">Education</a>
-              <a href="#projects" className="text-gray-300 hover:text-portfolio-lightPurple transition-colors text-sm">Projects</a>
-              <a href="#contact" className="text-gray-300 hover:text-portfolio-lightPurple transition-colors text-sm">Contact</a>
+              {['home', 'about', 'skills', 'qualifications', 'projects', 'contact'].map((section) => (
+                <a 
+                  key={section}
+                  href={`#${section}`} 
+                  className="text-gray-300 hover:text-portfolio-lightPurple transition-colors text-sm font-mono"
+                >
+                  {`<${section}/>`}
+                </a>
+              ))}
             </nav>
             
             <button 
@@ -51,6 +57,14 @@ const Footer = () => {
               <ArrowUp size={20} />
             </button>
           </div>
+        </div>
+        
+        <div className="mt-8 pt-6 border-t border-white/10 text-center font-mono text-xs text-gray-400">
+          <p className="flex items-center justify-center gap-2">
+            <Code size={14} className="text-portfolio-lightPurple" />
+            <span>Built with React, TypeScript, and Tailwind CSS</span>
+            <BrainCircuit size={14} className="text-portfolio-lightBlue" />
+          </p>
         </div>
       </div>
     </footer>

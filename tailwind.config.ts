@@ -64,12 +64,19 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				portfolio: {
-					blue: '#1a365d',
-					lightBlue: '#2b4a7e',
-					purple: '#6952a3',
-					lightPurple: '#9b87f5',
-					dark: '#121212',
-					light: '#f8f9fa'
+					blue: '#1a1f2c',        // Dark blue (replaced with darker shade)
+					lightBlue: '#1EAEDB',   // Bright blue for syntax highlighting
+					purple: '#6952a3',      // Keep existing purple
+					lightPurple: '#9b87f5', // Keep existing light purple
+					dark: '#121212',        // Keep existing dark
+					light: '#f8f9fa',       // Keep existing light
+					code: {
+						bg: '#1A1F2C',       // Dark background
+						text: '#FFFFFF',     // White text
+						highlight: '#9b87f5', // Purple highlight
+						comment: '#8A898C',   // Gray for comments
+						error: '#ea384c',     // Red for errors
+					}
 				}
 			},
 			borderRadius: {

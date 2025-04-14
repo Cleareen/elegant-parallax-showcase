@@ -7,30 +7,34 @@ const HeroBackground = () => {
       {/* Dark overlay with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-portfolio-blue/90 to-portfolio-purple/90 mix-blend-multiply z-20"></div>
       
-      {/* Animated grid lines */}
+      {/* Code-like grid patterns */}
       <div className="absolute inset-0 z-10 opacity-20">
         <div className="absolute inset-0 grid grid-cols-12 h-full">
           {[...Array(12)].map((_, i) => (
-            <div key={i} className="border-r border-white/10 h-full"></div>
+            <div key={i} className="border-r border-portfolio-lightPurple/20 h-full"></div>
           ))}
         </div>
         <div className="absolute inset-0 grid grid-rows-12 w-full">
           {[...Array(12)].map((_, i) => (
-            <div key={i} className="border-b border-white/10 w-full"></div>
+            <div key={i} className="border-b border-portfolio-lightPurple/20 w-full"></div>
           ))}
         </div>
       </div>
       
-      {/* Tech image gallery in grid */}
-      <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-4 gap-1 opacity-40 z-0">
-        <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
-        <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
-        <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
-        <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
-        <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
-        <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
-        <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
-        <div className="bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')" }}></div>
+      {/* Tech code snippets in background */}
+      <div className="absolute inset-0 opacity-10 font-mono text-xs md:text-sm overflow-hidden z-0">
+        <div className="absolute top-[10%] left-[5%] text-portfolio-lightPurple">
+          <pre>{"function initPortfolio() {\n  const skills = ['React', 'UI/UX', 'Tailwind'];\n  return skills.map(skill => <Skill key={skill} name={skill} />);\n}"}</pre>
+        </div>
+        <div className="absolute top-[30%] right-[5%] text-portfolio-lightBlue">
+          <pre>{"const Project = ({ title, desc }) => (\n  <div className=\"project\">\n    <h2>{title}</h2>\n    <p>{desc}</p>\n  </div>\n);"}</pre>
+        </div>
+        <div className="absolute bottom-[20%] left-[15%] text-portfolio-code-comment">
+          <pre>{"// Building beautiful interfaces\nimport { motion } from 'framer-motion';\n\nexport const AnimatedButton = () => {\n  return <motion.button whileHover={{ scale: 1.05 }} />;\n}"}</pre>
+        </div>
+        <div className="absolute bottom-[40%] right-[15%] text-portfolio-code-text">
+          <pre>{"const technologies = [\n  'HTML', 'CSS', 'JavaScript',\n  'React', 'Tailwind', 'Figma'\n];"}</pre>
+        </div>
       </div>
     </div>
   );

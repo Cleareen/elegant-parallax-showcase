@@ -57,11 +57,13 @@ const Navbar = () => {
   return (
     <header className={cn(
       "fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4",
-      scrolled ? "bg-portfolio-blue/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+      scrolled ? "bg-portfolio-blue/90 backdrop-blur-md shadow-sm" : "bg-transparent"
     )}>
       <div className="container px-4 mx-auto flex justify-between items-center">
-        <a href="#home" className="text-xl font-bold text-white">
-          <span className="text-portfolio-lightPurple">Anna</span>Smith
+        <a href="#home" className="text-xl font-bold text-white font-mono">
+          <span className="text-portfolio-lightPurple">Anna</span>
+          <span className="text-portfolio-code-text">.</span>
+          <span className="text-portfolio-lightBlue">dev</span>
         </a>
         
         {isMobile && (
@@ -81,13 +83,13 @@ const Navbar = () => {
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
                 className={cn(
-                  "link-highlight font-medium transition-colors text-sm uppercase tracking-wide",
+                  "link-highlight font-mono transition-colors text-sm uppercase tracking-wide",
                   activeSection === link.id 
                     ? "text-portfolio-lightPurple" 
                     : "text-white hover:text-portfolio-lightPurple"
                 )}
               >
-                {link.label}
+                {activeSection === link.id ? `<${link.label}/>` : link.label}
               </button>
             ))}
           </nav>
@@ -110,9 +112,10 @@ const Navbar = () => {
           </div>
         )}
         
+        {/* Mobile menu */}
         {isMobile && (
           <div className={cn(
-            "fixed inset-0 bg-portfolio-blue/95 backdrop-blur-md z-40 transition-transform duration-300 transform",
+            "fixed inset-0 bg-portfolio-code-bg/95 backdrop-blur-md z-40 transition-transform duration-300 transform",
             isOpen ? "translate-x-0" : "translate-x-full"
           )}>
             <div className="flex flex-col h-full p-8">
@@ -128,13 +131,13 @@ const Navbar = () => {
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
                     className={cn(
-                      "text-xl font-medium transition-colors",
+                      "text-xl font-mono transition-colors",
                       activeSection === link.id 
                         ? "text-portfolio-lightPurple" 
                         : "text-white"
                     )}
                   >
-                    {link.label}
+                    {activeSection === link.id ? `<${link.label}/>` : link.label}
                   </button>
                 ))}
               </nav>
