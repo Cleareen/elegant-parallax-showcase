@@ -3,8 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
@@ -93,12 +93,16 @@
   }
 
   body {
-    @apply bg-portfolio-code-bg text-portfolio-code-text font-[Inter];
+    @apply bg-portfolio-code-bg text-portfolio-code-text font-['JetBrains_Mono'];
     scroll-behavior: smooth;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  
   code, pre {
-    font-family: 'Fira Code', monospace;
+    font-family: 'JetBrains Mono', monospace;
   }
 }
 
@@ -121,7 +125,7 @@
   
   .link-highlight::after {
     content: '';
-    @apply absolute w-full h-0.5 bg-portfolio-lightPurple bottom-0 left-0 
+    @apply absolute w-full h-0.5 bg-portfolio-code-highlight bottom-0 left-0 
       transform scale-x-0 origin-bottom-right transition-transform duration-300;
   }
   
@@ -130,7 +134,7 @@
   }
   
   .blurred-card {
-    @apply bg-white/10 backdrop-blur-sm border border-white/20;
+    @apply bg-portfolio-code-bg/80 backdrop-blur-sm border border-portfolio-code-highlight/20;
   }
   
   .glowing {
@@ -139,7 +143,7 @@
   
   .glowing::before {
     content: '';
-    @apply absolute -inset-1 bg-gradient-to-r from-portfolio-purple via-portfolio-lightPurple to-portfolio-lightBlue 
+    @apply absolute -inset-1 bg-gradient-to-r from-portfolio-code-highlight/40 via-portfolio-lightBlue/40 to-portfolio-code-highlight/40
       rounded-lg blur opacity-30 transition duration-1000;
   }
   
@@ -162,4 +166,34 @@
   .error {
     @apply text-portfolio-code-error;
   }
+  
+  /* Matrix rain animation */
+  @keyframes matrixRain {
+    0% {
+      transform: translateY(-100%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  
+  .matrix-rain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .matrix-rain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, transparent 0%, rgba(32, 39, 55, 0.8) 75%);
+    z-index: 2;
+  }
 }
+

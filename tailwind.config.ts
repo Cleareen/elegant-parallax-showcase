@@ -64,18 +64,21 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				portfolio: {
-					blue: '#1a1f2c',        // Dark blue (replaced with darker shade)
-					lightBlue: '#1EAEDB',   // Bright blue for syntax highlighting
-					purple: '#6952a3',      // Keep existing purple
-					lightPurple: '#9b87f5', // Keep existing light purple
-					dark: '#121212',        // Keep existing dark
+					blue: '#161B22',        // Dark blue background (code editor dark)
+					lightBlue: '#39C5BB',   // Bright teal for syntax highlighting (functions)
+					purple: '#6952a3',      // Dark purple
+					lightPurple: '#A78BFA', // Light purple (keywords)
+					dark: '#0D1117',        // Very dark blue/black (VSCode-like)
 					light: '#f8f9fa',       // Keep existing light
 					code: {
-						bg: '#1A1F2C',       // Dark background
-						text: '#FFFFFF',     // White text
-						highlight: '#9b87f5', // Purple highlight
-						comment: '#8A898C',   // Gray for comments
-						error: '#ea384c',     // Red for errors
+						bg: '#0D1117',       // Dark background (GitHub dark)
+						text: '#E6EDF3',     // Light text
+						highlight: '#F97583', // Pink highlight (keywords)
+						comment: '#8B949E',   // Gray for comments
+						error: '#F85149',     // Red for errors
+						string: '#A5D6FF',    // Blue for strings
+						variable: '#79C0FF',  // Light blue for variables
+						function: '#D2A8FF',  // Purple for functions
 					}
 				}
 			},
@@ -132,6 +135,22 @@ export default {
 					'50%': { 
 						opacity: '0.8' 
 					}
+				},
+				'text-blink': {
+					'0%, 100%': {
+						borderRightColor: 'transparent'
+					},
+					'50%': {
+						borderRightColor: 'currentColor'
+					}
+				},
+				'bg-pan': {
+					'0%': {
+						backgroundPosition: '0% 50%'
+					},
+					'100%': {
+						backgroundPosition: '100% 50%'
+					}
 				}
 			},
 			animation: {
@@ -141,7 +160,9 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'slide-in-right': 'slide-in-right 0.5s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'cursor-blink': 'text-blink 1s step-end infinite',
+				'bg-pan-slow': 'bg-pan 15s linear infinite alternate'
 			}
 		}
 	},
