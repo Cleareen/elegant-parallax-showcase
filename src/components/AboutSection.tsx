@@ -1,5 +1,6 @@
+
 import React, { useRef } from 'react';
-import { Code, Laptop, School, GraduationCap } from 'lucide-react';
+import { Code, Laptop, School, GraduationCap, Github, Linkedin, Twitter } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
 
 interface ServiceCardProps {
@@ -72,17 +73,30 @@ const AboutSection = () => {
             <div className="relative glowing rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-portfolio-blue/20 to-portfolio-purple/20 z-0"></div>
               <img 
-                src="/lovable-uploads/89050242-9fbf-45d4-bbf6-5cb9ca3dd2df.jpg" 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
                 alt="Eddie Mkansi Profile" 
                 className="relative z-10 w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  console.error('Image failed to load', e);
-                  (e.target as HTMLImageElement).src = '/placeholder.svg';
-                }}
+                style={{ height: "400px" }}
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-portfolio-purple rounded-lg z-[-1] opacity-20"></div>
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-portfolio-blue rounded-lg z-[-1] opacity-20"></div>
+            
+            {/* Social Media Links */}
+            <div className="flex space-x-4 mt-4 justify-center">
+              <a href="https://www.linkedin.com/in/eddie-mkansi-1247b8116/" target="_blank" rel="noopener noreferrer" 
+                className="p-3 bg-white rounded-full shadow-md hover:bg-portfolio-purple/10 transition-colors">
+                <Linkedin className="w-5 h-5 text-portfolio-blue" />
+              </a>
+              <a href="https://github.com/Cleareen" target="_blank" rel="noopener noreferrer"
+                className="p-3 bg-white rounded-full shadow-md hover:bg-portfolio-purple/10 transition-colors">
+                <Github className="w-5 h-5 text-portfolio-blue" />
+              </a>
+              <a href="https://x.com/ed_mka" target="_blank" rel="noopener noreferrer"
+                className="p-3 bg-white rounded-full shadow-md hover:bg-portfolio-purple/10 transition-colors">
+                <Twitter className="w-5 h-5 text-portfolio-blue" />
+              </a>
+            </div>
           </div>
           
           <div className="space-y-6">
