@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { Code, Laptop, School, GraduationCap } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
@@ -74,8 +73,12 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-portfolio-blue/20 to-portfolio-purple/20 z-0"></div>
               <img 
                 src="/lovable-uploads/89050242-9fbf-45d4-bbf6-5cb9ca3dd2df.jpg" 
-                alt="Eddie Mkansi" 
-                className="relative z-10 w-full h-auto rounded-lg"
+                alt="Eddie Mkansi Profile" 
+                className="relative z-10 w-full h-auto rounded-lg object-cover"
+                onError={(e) => {
+                  console.error('Image failed to load', e);
+                  (e.target as HTMLImageElement).src = '/placeholder.svg';
+                }}
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-portfolio-purple rounded-lg z-[-1] opacity-20"></div>
