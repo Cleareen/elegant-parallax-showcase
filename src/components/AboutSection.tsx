@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { Code, Laptop, School, GraduationCap } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
@@ -59,7 +58,7 @@ const AboutSection = () => {
             }`}
             style={{ transitionDelay: '200ms' }}
           >
-            I'm a passionate, multi-talented educator turned software engineer, data analyst, and aspiring tech entrepreneur.
+            A lifelong learner, passionate teacher, and joyful coder who believes technology can change lives.
           </p>
         </div>
 
@@ -89,12 +88,9 @@ const AboutSection = () => {
               }`}
               style={{ transitionDelay: '200ms' }}
             >
-              <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">Who I Am</h3>
+              <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">My Journey</h3>
               <p className="text-gray-600 mb-4">
-                With a rock-solid background in teaching Computer Applications Technology (CAT), 
-                Information Technology (IT), Digital Technologies, and Mathematics, I've spent 
-                over 4 years in the classroom, inspiring young minds—and now I'm building 
-                intelligent systems that solve real-world problems.
+                Hi there! My name is Eddie, and honestly — the moment I touched a computer for the first time, I knew I had found magic. I still remember how it felt. I was just a kid, eyes wide open, heart racing, completely amazed by what a computer could do.
               </p>
             </div>
             
@@ -104,12 +100,9 @@ const AboutSection = () => {
               }`}
               style={{ transitionDelay: '400ms' }}
             >
-              <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">My Approach</h3>
+              <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">My Passion</h3>
               <p className="text-gray-600">
-                While my journey began in education, my love for technology and innovation led 
-                me to explore software development, data engineering, business intelligence, and 
-                cybersecurity. Today, I'm equally comfortable in a classroom and a codebase, creating 
-                apps, analyzing data, building educational tech tools, and helping others do the same.
+                While others saw a computer as just a tool, I saw something much deeper. I wasn't satisfied with just using technology — I wanted to create with it. From late-night YouTube tutorials to teaching Computer Applications Technology, my journey has been about sharing the excitement of technology and helping others discover their own magic.
               </p>
             </div>
           </div>
