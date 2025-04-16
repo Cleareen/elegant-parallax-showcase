@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { Code, Laptop, School, GraduationCap } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
@@ -72,8 +73,8 @@ const AboutSection = () => {
             <div className="relative glowing rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-portfolio-blue/20 to-portfolio-purple/20 z-0"></div>
               <img 
-                src="/lovable-uploads/c073f43a-1c8a-4665-9e40-e364adcd8e79.png" 
-                alt="Eddie Mkansi at a border sign between South Africa and Mozambique" 
+                src="/lovable-uploads/89050242-9fbf-45d4-bbf6-5cb9ca3dd2df.jpg" 
+                alt="Eddie Mkansi" 
                 className="relative z-10 w-full h-auto rounded-lg"
               />
             </div>
@@ -90,7 +91,10 @@ const AboutSection = () => {
             >
               <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">My Journey</h3>
               <p className="text-gray-600 mb-4">
-                Hi there! My name is Eddie, and honestly — the moment I touched a computer for the first time, I knew I had found magic. I still remember how it felt. I was just a kid, eyes wide open, heart racing, completely amazed by what a computer could do.
+                Hi there! My name is Eddie, and honestly — the moment I touched a computer for the first time, I knew I had found magic. I still remember how it felt. I was just a kid, eyes wide open, heart racing, completely amazed by what a computer could do. But while others saw it as just a tool or a toy, I saw something much deeper — I wanted to know how it worked. What made it tick? How could pressing a few keys turn into something so powerful?
+              </p>
+              <p className="text-gray-600 mb-4">
+                That curiosity quickly turned into a passion. I wasn't satisfied with just using a computer — I wanted to create with it. So I started learning on my own. I watched YouTube tutorials late at night, googled every little question I had, and slowly began teaching myself how to build websites, write code, and understand the logic behind the screen. HTML, CSS, Python, JavaScript… each new discovery felt like I was unlocking a new superpower.
               </p>
             </div>
             
@@ -100,11 +104,31 @@ const AboutSection = () => {
               }`}
               style={{ transitionDelay: '400ms' }}
             >
-              <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">My Passion</h3>
+              <h3 className="text-2xl font-semibold text-portfolio-blue mb-2">Education & Teaching</h3>
+              <p className="text-gray-600 mb-4">
+                I didn't want to keep all that excitement to myself — I wanted to share it. That's what pushed me to pursue a Bachelor of Education, and I was beyond excited when I got accepted at the University of the Witwatersrand. I majored in Information Technology and Mathematics because I wanted to become a real problem-solver — someone who could not only understand technology but teach it in a way that makes others just as excited as I was when I first started.
+              </p>
               <p className="text-gray-600">
-                While others saw a computer as just a tool, I saw something much deeper. I wasn't satisfied with just using technology — I wanted to create with it. From late-night YouTube tutorials to teaching Computer Applications Technology, my journey has been about sharing the excitement of technology and helping others discover their own magic.
+                As a teacher, I've spent the last 5+ years teaching Computer Applications Technology (CAT), Digital Technologies, Mathematics, and Information Technology (Java and Delphi). I've helped students build their first programs, watched their eyes light up when a project finally works, and even started robotics clubs to get hands-on with tech like Arduino, Micro:bit, and LEGO Spike Prime.
               </p>
             </div>
+          </div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className={`transition-all duration-700 ${
+            imageInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`} style={{ transitionDelay: '600ms' }}>
+            <h3 className="text-2xl font-semibold text-center text-portfolio-blue mb-6">Continuous Learning</h3>
+            <p className="text-gray-600 mb-4">
+              And while teaching, I never stopped learning. I've earned certifications from Google, AWS, IBM, and Cisco, and completed amazing bootcamps like ALX Software Engineering and ExploAI Data Engineering, pushing myself to grow into areas like cloud computing, data analytics, and cybersecurity.
+            </p>
+            <p className="text-gray-600 mb-4">
+              But no matter how far I go, that childhood joy and curiosity still live in me. I still get excited when I figure out a tricky bug. I still celebrate quietly when I write a really good function. And I still believe that technology — when used with heart — can change lives, open doors, and give others the same spark I had when I first sat in front of a computer.
+            </p>
+            <p className="text-gray-600 text-center font-medium">
+              So that's me. A lifelong learner, a passionate teacher, a joyful coder, and someone who still believes that computers are a little bit magical.
+            </p>
           </div>
         </div>
         
